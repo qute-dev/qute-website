@@ -2,14 +2,14 @@ name: Deploy Website
 
 on:
   push:
-    branches: [dev, self-hosted]
+    branches: [dev]
 
   workflow_dispatch:
 
 jobs:
   deploy:
     name: Deploy
-    runs-on: self-hosted
+    runs-on: [dev, self-hosted]
 
     steps:
       - name: Checkout main branch
